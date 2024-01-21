@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { useRef } from 'react'
 import Card from './Card'
+import Navbar from './components/Navbar/Navbar'
 
 
 const App = () => {
@@ -32,17 +33,20 @@ const App = () => {
   
   return (
     <>
-    <div>
+    <Navbar/>
+    <div style={{ display:'flex' , justifyContent:'center'}}>
+      <div>
       <h1>TODO-APP</h1>
-      <form onSubmit={Input}>
-      <input type="text" name="" placeholder=' ENTER TODO'  id="" ref={Todovalue} />
-      <button type='submit'>ADD TODO</button>
+      <form onSubmit={Input} style={{gap:'25px', display:'flex'}}>
+      <input type="text" style={{padding:'10px' , borderRadius:'12px' ,width:'300px' , outline:'none' }} name="" placeholder=' ENTER TODO'  id="" ref={Todovalue} />
+      <button style={{padding:'8px' , borderRadius:'12px'}} type='submit'>ADD TODO</button>
       </form>
+      </div>
     </div>
     {data.length > 0 ? data.map((item , index)=>{ 
       console.log(item);
-      return <Card title={item} DeleteTodo={DeleteTodos} EditTodo={EditTodos} index={index}
-       />}) : <h3>Please Enter Todo...</h3>}
+      return <Card key={index} title={item} DeleteTodo={DeleteTodos} EditTodo={EditTodos} index={index}
+       />}) : <h1 style={{textAlign:'center', paddingRight:'140px'}}>Please Enter Todo...</h1>}
 
     </>
   )
