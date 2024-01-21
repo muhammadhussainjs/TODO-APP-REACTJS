@@ -12,12 +12,12 @@ const Card = ({  title , DeleteTodo , EditTodo  , index }) => {
   return (
     <>
     
-    <div style={{display:'flex', justifyContent:'center'}}>
+    <div style={{display:'flex',justifyContent:'center'}}>
     
         {showInput ?<div>
         <h2>{title}</h2>
         <button style={{padding:'8px' , borderRadius:'12px'}} onClick={()=>DeleteTodo(index)}>delete</button>
-        <button style={{padding:'8px' , borderRadius:'12px'}} onClick={()=>setShowInput(false)}>edit</button></div> :<div style={{marginTop:'20px', marginRight:'58px' , justifyContent:'center'}}> <input type='text' ref={newvalue} style={{padding:'10px' , borderRadius:'12px' ,width:'300px' , outline:'none' }} placeholder='ENTER NEW TODO'></input> <button style={{padding:'8px' , borderRadius:'12px'}} onClick={saveEditTodo}>save</button></div>}
+        <button style={{padding:'8px' , borderRadius:'12px'}} onClick={()=>setShowInput(false)}>edit</button></div> :<div style={{marginTop:'20px', marginRight:'40px' , justifyContent:'center' , gap:'25px', display:'flex'}}> <input type='text' ref={newvalue} style={{padding:'10px' , borderRadius:'12px' ,width:'250px' , outline:'none' }} placeholder='ENTER NEW TODO'></input> <button style={{padding:'8px' , borderRadius:'12px'}} onClick={saveEditTodo}>save</button></div>}
 </div>
     
     

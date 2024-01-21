@@ -38,7 +38,7 @@ const App = () => {
       <div>
       <h1>TODO-APP</h1>
       <form onSubmit={Input} style={{gap:'25px', display:'flex'}}>
-      <input type="text" style={{padding:'10px' , borderRadius:'12px' ,width:'300px' , outline:'none' }} name="" placeholder=' ENTER TODO'  id="" ref={Todovalue} />
+      <input type="text" style={{padding:'10px' , borderRadius:'12px' ,width:'250px' , outline:'none' }} name="" placeholder=' ENTER TODO'  id="" ref={Todovalue} />
       <button style={{padding:'8px' , borderRadius:'12px'}} type='submit'>ADD TODO</button>
       </form>
       </div>

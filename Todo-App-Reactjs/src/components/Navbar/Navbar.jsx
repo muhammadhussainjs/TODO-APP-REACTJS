@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <>
     <div>
-    <ul style={{display:'flex', justifyContent:'space-around'}}>
+    <ul style={{display:'flex', justifyContent:'space-around', listStyle:'none'}}>
         <li>Home</li>
         <li>About</li>
         <li>Contact</li>
